@@ -1,0 +1,64 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34916.146
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pokemon", "Pokemon\Pokemon.csproj", "{5F0E2DE2-E591-4ED0-890A-2D935C5056EA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{1A13A16E-850C-426E-92B2-98B771F4916F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{86A691B3-6916-402D-A14D-D35DEB96C6BD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{7622931D-5269-411E-A386-AEE183DCBF37}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{5C1E6854-7576-4F4D-9ADC-7DF4978DB5C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pokemon.Domain", "Pokemon.Domain\Pokemon.Domain.csproj", "{A546DFD2-16B1-4033-9C3F-49151A8BCBCD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pokemon.Application", "Pokemon.Application\Pokemon.Application.csproj", "{2DDA2DB7-F704-4CDB-AC2C-51C9C111CB7A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pokemon.Persistence", "Pokemon.Persistence\Pokemon.Persistence.csproj", "{2E1322FA-A155-4AC1-A579-E4995ACE9DB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokemonTest", "PokemonTest\PokemonTest.csproj", "{7849D836-5631-479D-A147-CD7FC814F7AA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5F0E2DE2-E591-4ED0-890A-2D935C5056EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F0E2DE2-E591-4ED0-890A-2D935C5056EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F0E2DE2-E591-4ED0-890A-2D935C5056EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F0E2DE2-E591-4ED0-890A-2D935C5056EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A546DFD2-16B1-4033-9C3F-49151A8BCBCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A546DFD2-16B1-4033-9C3F-49151A8BCBCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A546DFD2-16B1-4033-9C3F-49151A8BCBCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A546DFD2-16B1-4033-9C3F-49151A8BCBCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DDA2DB7-F704-4CDB-AC2C-51C9C111CB7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DDA2DB7-F704-4CDB-AC2C-51C9C111CB7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DDA2DB7-F704-4CDB-AC2C-51C9C111CB7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DDA2DB7-F704-4CDB-AC2C-51C9C111CB7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E1322FA-A155-4AC1-A579-E4995ACE9DB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E1322FA-A155-4AC1-A579-E4995ACE9DB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E1322FA-A155-4AC1-A579-E4995ACE9DB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E1322FA-A155-4AC1-A579-E4995ACE9DB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7849D836-5631-479D-A147-CD7FC814F7AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7849D836-5631-479D-A147-CD7FC814F7AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7849D836-5631-479D-A147-CD7FC814F7AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7849D836-5631-479D-A147-CD7FC814F7AA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5F0E2DE2-E591-4ED0-890A-2D935C5056EA} = {86A691B3-6916-402D-A14D-D35DEB96C6BD}
+		{A546DFD2-16B1-4033-9C3F-49151A8BCBCD} = {1A13A16E-850C-426E-92B2-98B771F4916F}
+		{2DDA2DB7-F704-4CDB-AC2C-51C9C111CB7A} = {1A13A16E-850C-426E-92B2-98B771F4916F}
+		{2E1322FA-A155-4AC1-A579-E4995ACE9DB7} = {5C1E6854-7576-4F4D-9ADC-7DF4978DB5C0}
+		{7849D836-5631-479D-A147-CD7FC814F7AA} = {7622931D-5269-411E-A386-AEE183DCBF37}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BFFC5C13-6869-45C3-BC80-D88D0482A929}
+	EndGlobalSection
+EndGlobal
