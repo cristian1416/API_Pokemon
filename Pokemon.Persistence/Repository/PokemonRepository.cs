@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Microsoft.Extensions.Configuration;
+using Newtonsoft.Json;
 using Pokemon.Domain.Entities;
 using Pokemon.Domain.Interfaces;
 using System;
@@ -13,14 +14,16 @@ namespace Pokemon.Persistence.Repository
     public class PokemonRepository : IPokemonRepository
     {
         private readonly HttpClient _httpClient;
-        public PokemonRepository(HttpClient httpClient)
+        private readonly IConfiguration _configuration;
+        public PokemonRepository(HttpClient httpClient, IConfiguration configuration)
         {
+            _configuration = configuration;
             _httpClient = httpClient;
         }
         public async Task<InfoPokemonResponse> GetInfoPokemon(string pokemon)
         {
-            var url = "https://pokeapi.co/api/v2/pokemon/{namePokemon}";
-            var response = await _httpClient.GetAsync(url.Replace("{namePokemon}", pokemon));
+            var url = _configuration["PokemonApi:Url"].Replace("{namePokemon}", pokemon);
+            var response = await _httpClient.GetAsync(url);
 
             if (response.IsSuccessStatusCode)
             {

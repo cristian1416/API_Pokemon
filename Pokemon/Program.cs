@@ -19,13 +19,12 @@ Log.Logger = new LoggerConfiguration()
     .WriteTo.File(
         path: "logs/myapp.txt",
         rollingInterval: RollingInterval.Day,
-        retainedFileCountLimit: 7, // Limita la cantidad de archivos de log
+        retainedFileCountLimit: 7,
         outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level}] {Message}{NewLine}{Exception}")
     .CreateLogger();
 
 builder.Host.UseSerilog();
 
-// Add services to the container.
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
@@ -81,7 +80,6 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddTransient<IPokemon, PokemonService>();
 builder.Services.AddTransient<IPokemonRepository, PokemonRepository>();
 builder.Services.AddTransient<IAuthorize, Authorize>();
-//builder.Services.AddSingleton<ILogger1, LoggerPokemon>();
 builder.Services.AddHttpClient();
 
 var app = builder.Build();

@@ -1,3 +1,4 @@
+using Castle.Core.Configuration;
 using Castle.Core.Logging;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -8,7 +9,8 @@ using Pokemon.Domain.Entities;
 using Pokemon.Domain.Interfaces;
 using Pokemon.Persistence.Repository;
 using System.Security.Cryptography.X509Certificates;
-
+using Microsoft.Extensions.Configuration;
+using IConfiguration = Microsoft.Extensions.Configuration.IConfiguration;
 namespace PokemonTest
 {
     [TestClass]
@@ -16,14 +18,18 @@ namespace PokemonTest
     {
         private readonly IPokemon _pokemonService;
         private readonly HttpClient _httpClient;
+        private readonly IConfiguration _configuration;
         private readonly IPokemonRepository _pokemonRepository;
         private readonly ILogger<PokemonService> _logger;
         private readonly PokemonController _controller;
 
         public UnitTestPokemon()
         {
+            _configuration = new ConfigurationBuilder()
+        .AddJsonFile("appsettings.json")
+        .Build();
             _httpClient = new HttpClient();
-            _pokemonRepository = new PokemonRepository(_httpClient);
+            _pokemonRepository = new PokemonRepository(_httpClient, _configuration);
             _pokemonService = new PokemonService(_pokemonRepository, _logger);
             _controller = new PokemonController(_pokemonService);
         }
